@@ -1,0 +1,1 @@
+export default function Features() { return <section className="p-4">Features</section>; }
