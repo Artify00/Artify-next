@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-black font-sans">
+      <body className="min-h-screen bg-red-20 text-black font-sans">
         <header className="w-full border-b border-gray-200 p-4 flex justify-between items-center">
           <Link href="/" className="text-xl font-bold">Artify</Link>
           <nav className="space-x-4">
