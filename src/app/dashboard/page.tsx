@@ -14,15 +14,18 @@ export default function Dashboard() {
         router.push('/login')
         return
       }
-      setUserEmail(data.user.email ?? null) // 🔧 타입 안전하게 처리
+      setUserEmail(data.user.email ?? 'User')
     }
     getUser()
   }, [])
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold">Welcome to your Dashboard</h1>
-      <p className="mt-4">Logged in as: <strong>{userEmail}</strong></p>
-    </div>
+    <main className="min-h-screen bg-white flex flex-col items-center justify-center p-6">
+      <div className="w-full max-w-2xl border border-gray-200 shadow-sm p-8 rounded-2xl">
+        <h1 className="text-3xl font-semibold mb-4 text-gray-900">🎨 Welcome to Artify</h1>
+        <p className="text-gray-600">You are logged in as:</p>
+        <p className="text-lg font-medium text-black mt-1">{userEmail}</p>
+      </div>
+    </main>
   )
 }
