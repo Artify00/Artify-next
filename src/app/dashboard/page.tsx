@@ -14,7 +14,7 @@ export default function Dashboard() {
         router.push('/login')
         return
       }
-      setUserEmail(data.user.email)
+      setUserEmail(data.user.email ?? null) // 🔧 타입 안전하게 처리
     }
     getUser()
   }, [])
